@@ -29,4 +29,7 @@
   font-weight: bold;
 }
 
-
+#current-date {
+  color: green;
+  font-weight: bold;
+}

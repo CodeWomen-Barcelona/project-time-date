@@ -2,11 +2,13 @@
 const date = new Date()
 console.log(date.toDateString());
 
+// date.getFullYear() gets you the current year
 const year = date.getFullYear()
 console.log(year);
 
 
-// date.getMonth() gets the month index, and indexing starts at 0 so you have to add 1
+// date.getMonth() gets the INDEX of the current month, and indexing starts at 0
+// so you have to add 1
 const month = date.getMonth() + 1
 console.log(month);
 

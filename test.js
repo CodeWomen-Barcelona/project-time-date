@@ -1,13 +1,14 @@
+const date = new Date()
 
+function formatDate(date, format) {
+  const map = {
+      mm: date.getMonth() + 1,
+      dd: date.getDate(),
+      yy: date.getFullYear().toString().slice(-2),
+      yyyy: date.getFullYear()
+  }
 
-let runSeconds = 6665
-let totalSeconds = runSeconds % 60;
-let totalHours = Math.floor(runSeconds / 3600);
-let totalMinutes = Math.floor(runSeconds / 60 - totalHours * 60)
+  return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
+}
 
-
-console.log(totalSeconds);
-console.log(totalMinutes);
-console.log(totalHours);
-
-
+console.log(formatDate(date));
