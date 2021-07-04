@@ -1,3 +1,6 @@
+
+// This is an example of how to get the current time of the day and format it
+
 const today = new Date()
 let hour = today.getHours();
 let minute = today.getMinutes();
