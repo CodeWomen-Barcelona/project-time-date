@@ -1,14 +1,9 @@
-const date = new Date()
 
-function formatDate(date, format) {
-  const map = {
-      mm: date.getMonth() + 1,
-      dd: date.getDate(),
-      yy: date.getFullYear().toString().slice(-2),
-      yyyy: date.getFullYear()
-  }
+const date = new Date();
 
-  return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
-}
+const options = { weekday: 'long', year: 'numeric', month: 'long', };
 
-console.log(formatDate(date));
+console.log(date.toLocaleDateString('en-ES',{weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'}));
+
+// currentDate()
+

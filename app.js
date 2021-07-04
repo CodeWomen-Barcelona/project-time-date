@@ -1,13 +1,8 @@
 // Get the current date in correct format
-function startDate(date, format) {
-  const map = {
-      mm: date.getMonth() + 1,
-      dd: date.getDate(),
-      yy: date.getFullYear().toString().slice(-2),
-      yyyy: date.getFullYear()
-  }
-
-  return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
+function startDate() {
+  const date = new Date();
+  const currentDate = date.toLocaleDateString('en-ES',{weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'})
+  document.querySelector("#current-date").innerHTML = currentDate
 }
 
 
