@@ -14,9 +14,12 @@ console.log(month);
 
 // The option { month: 'long' } will return the full month name. You have to use the function
 //  toLocaleString to extract the month as a string, and then use the 'long' method to get
-//  the full name
+//  the full name. The options are: {weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'}
 const monthFullName = date.toLocaleString('default', { month: 'long' });
 console.log(monthFullName);
 
+// Instead of 'default' you can use a timezone or country code with date.toLocaleString
 
-// Read more: https://www.freecodecamp.org/news/javascript-date-now-how-to-get-the-current-date-in-javascript/
+// Read more: 
+// https://www.freecodecamp.org/news/javascript-date-now-how-to-get-the-current-date-in-javascript/
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
